@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: -1;
+}
+
+header{
+    height: 100vh;
+}
+nav{
+    height: 10vh;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    min-height: 10vh;
+    color: #b78460;
+    align-items: center;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+}
+.hamburger{
+    display: none;
+}
+.landing{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.hero {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    top: 10vh;
+}
+.hero img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+.headline{
+    position: absolute;
+    top: 100%;
+    right: 35%;
+    font-size: 100px;
+    transform: translate(-20%, -70%);
+    color: #dbbaa7;
+    z-index: 3;
+}
+.info{
+    color: #211b1a;
+    position: absolute;
+    z-index: 3;
+    width: 30%;
+    bottom: 50%;
+    left: 75%;
+    /*transform: translate(80%, -150%);*/
+}
+.logo{
+    grid-column: 2/3;
+    font-size: 24px;
+    z-index: 10;
+}
+.logo a{
+    color: #b5947d;
+    text-decoration: none;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 5px;
+    grid-column: 3/5;
+    top: 0;
+}
+.nav-links li{
+    margin-left: 25px;
+}
+.nav-links a{
+    color: #b78460;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+.om-meg{
+    height: 100vh;
+    background:linear-gradient(to left, #bcb2ad, #efe3dd);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.om-meg div{
+    width: 100%;
+    max-width: 400px;
+    
+}
+.om-meg div h1{
+    position: relative;
+    font-size: 3rem;
+    color: #b78460;
+    bottom: 130px;
+    border-top: 2px solid #cfac92;
+    
+}
+.om-meg div p{
+    color: #57473c;
+}
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}  
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 20px;
+    background: #efe3dd;
+    border-radius: 8px;
+}
+.skill-per{
+    height: 20px;
+    background-color: #948477;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+
+
+
+.prosjekter{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.prosjekter h1{
+    font-size: 3rem;
+    color: #948477;
+}
+.glide{
+    flex-direction: column;
+    height: 70vh;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+}
+.glide__slide video{
+    width: 80vw;
+    height: 50vh;
+    object-fit: contain;
+}
+
+
+
+.kontakt-meg{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.kontakt-meg h1{
+    font-size: 3rem;
+    color: #948477;
+}
+.kontakt-meg div{
+    flex-direction: row;
+}
+.kontakt-meg div a img{
+    height: 100px;
+}
+
+@media screen and (max-width: 1157px){
+
+    .logo a.open{
+        color: white;
+        text-decoration: none;
+    }
+    .line{
+        width: 30px;
+        height: 3px;
+        background: #b78460;
+        margin: 5px;
+    }
+    .line.open{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background:linear-gradient(to left, #ba7453, #d1a984);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(89px at 90% -10%);
+        -webkit-clip-path: circle(89px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/-1;
+    }
+    .nav-links.open{
+        clip-path: circle(1500px at 90% -10%);
+        -webkit-clip-path: circle(1500px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li a{
+        font-size: 25px;
+        color: white;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+    .headline{
+        font-size: 70px;
+        top: 100%;
+        right: 10%;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero img{
+        width: 100%;
+    }
+    .info{
+        color: #211b1a;
+        position: absolute;
+        z-index: 3;
+        width: 70%;
+        bottom: -20%;
+        left: 5%;
+    }
+}
+
+/*
+få logo og hamburger hvit når åpen
+responsiv hero
+størrelsen på glide__slide?
+*/
