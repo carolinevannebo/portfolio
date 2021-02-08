@@ -115,13 +115,16 @@ $('.skill-per').each(function(){
     $({animatedValue: 0}).animate({animatedValue: per},{
       duration: 1000,
       step: function(){
+          /*if(per == 100){
+              console.log(this.animatedValue);
+          }*/
         $this.attr('per', Math.floor(this.animatedValue) + '%');
       },
       complete: function(){
         $this.attr('per', Math.floor(this.animatedValue) + '%');
       }
     });
-  });
+});
 
   
 

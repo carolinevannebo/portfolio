@@ -110,12 +110,13 @@ nav{
     justify-content: space-evenly;
     align-items: center;
 }
-.om-meg div{
+
+.infoBox{
     width: 100%;
     max-width: 400px;
     
 }
-.om-meg div h1{
+.infoBox h1{
     position: relative;
     font-size: 3rem;
     color: #b78460;
@@ -123,7 +124,7 @@ nav{
     border-top: 2px solid #cfac92;
     
 }
-.om-meg div p{
+.infoBox p{
     color: #57473c;
 }
 .skills{
