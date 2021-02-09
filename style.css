@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 .slider{
     position: absolute;
@@ -55,12 +55,13 @@ nav{
     object-fit: cover;
 }
 .headline{
+    font-family: 'Merienda', cursive;
     position: absolute;
     top: 100%;
     right: 35%;
     font-size: 100px;
     transform: translate(-20%, -70%);
-    color: #dbbaa7;
+    color: #b5947d;
     z-index: 3;
 }
 .info{
@@ -109,11 +110,12 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 10%;
 }
-
 .infoBox{
     width: 100%;
     max-width: 400px;
+    color: #57473c;
     
 }
 .infoBox h1{
@@ -121,16 +123,21 @@ nav{
     font-size: 3rem;
     color: #b78460;
     bottom: 130px;
-    border-top: 2px solid #cfac92;
-    
+    border-top: 2px solid #cfac92;   
 }
-.infoBox p{
-    color: #57473c;
+th{
+    display: flex;/*
+    align-items: flex-start;
+    justify-content: left;*/
+}
+table{
+    width: 100%;
 }
 .skills{
     width: 100%;
     max-width: 600px;
     padding: 0 20px;
+    color: #211b1a;
 }  
 .skill-name{
     font-size: 18px;
@@ -150,12 +157,13 @@ nav{
     width: 0;
     transition: 1s linear;
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .skill-per::before{
     content: attr(per);
     position: absolute;
     padding: 4px 6px;
-    background-color: #000;
+    background-color: #211b1a;
     color: #fff;
     font-size: 12px;
     border-radius: 4px;
@@ -168,7 +176,7 @@ nav{
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #000;
+    background-color: #211b1a;
     top: -16px;
     right: 0;
     transform: translateX(50%) rotate(45deg);
@@ -213,10 +221,14 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .kontakt-meg h1{
     font-size: 3rem;
-    color: #948477;
+    color: #bcb2ad;
 }
 .kontakt-meg div{
     flex-direction: row;
@@ -258,13 +270,14 @@ nav{
         height: 100vh;
         width: 100%;
         flex-direction: column;
-        clip-path: circle(89px at 90% -10%);
-        -webkit-clip-path: circle(89px at 90% -10%);
+        clip-path: circle(50px at 90% -10%);
+        -webkit-clip-path: circle(50px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
         justify-content: center;
         align-items: center;
         grid-column: 1/-1;
+        /*89px circle*/
     }
     .nav-links.open{
         clip-path: circle(1500px at 90% -10%);
@@ -292,7 +305,7 @@ nav{
     }
     .headline{
         font-size: 70px;
-        top: 100%;
+        top: 101%;
         right: 10%;
     }
     .hero{
@@ -311,9 +324,39 @@ nav{
         left: 5%;
     }
 }
-
+@media screen and (max-width: 756px){
+    .headline{
+        font-size: 50px;
+        top: 100%;
+    }
+    .info{
+        font-size: 15px;
+        bottom: -25%;
+    }
+    .om-meg{
+        flex-direction: column;
+        padding: 0% 10% 0% 10%;
+    }
+    .infoBox{
+        max-height: 60%;
+    }
+    .infoBox h1{
+        bottom: 20px;
+    }
+}
+@media screen and (max-width: 468px){
+    .headline{
+        font-size: 40px;
+    }
+    .info{
+        font-size: 12px;
+        bottom: -15%;
+    }
+    .infoBox h1{
+        font-size: 30px;
+    }
+}
 /*
-få logo og hamburger hvit når åpen
 responsiv hero
 størrelsen på glide__slide?
 */

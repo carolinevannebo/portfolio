@@ -8,7 +8,8 @@ const logo = document.querySelector('.logo');
 const headline = document.querySelector('.headline');
 const info = document.querySelector('.info');
 const nav = document.querySelector('nav');
-const box = document.querySelector('.box');
+//const box = document.querySelector('.box');
+const skill = document.querySelector('.skill-per');
 
 
 hamburger.addEventListener('click', () => {
@@ -98,10 +99,10 @@ tl.fromTo(
 
 /*
 function scrollAppear(){
-    var boxPosition = box.getBoundingClientRect().top;
+    var skillsPosition = skills.getBoundingClientRect().top;
     var screenPosition = window.innerHeight / 2;
-    if(boxPosition < screenPosition){
-        box.classList.add('box-appear');
+    if(skillsPosition < screenPosition){
+    skills.classList.add('skills-appear');
     }
 };
 
@@ -115,9 +116,6 @@ $('.skill-per').each(function(){
     $({animatedValue: 0}).animate({animatedValue: per},{
       duration: 1000,
       step: function(){
-          /*if(per == 100){
-              console.log(this.animatedValue);
-          }*/
         $this.attr('per', Math.floor(this.animatedValue) + '%');
       },
       complete: function(){
@@ -125,7 +123,6 @@ $('.skill-per').each(function(){
       }
     });
 });
-
   
 
 new Glide('.glide', {
