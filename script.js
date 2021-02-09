@@ -10,6 +10,18 @@ const info = document.querySelector('.info');
 const nav = document.querySelector('nav');
 const skills = document.querySelector('#skills');
 
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyDNwmQq0x9EznaVYqoGSw1_D3k6iJZPnls",
+    authDomain: "portfolio-7effb.firebaseapp.com",
+    projectId: "portfolio-7effb",
+    storageBucket: "portfolio-7effb.appspot.com",
+    messagingSenderId: "380388731453",
+    appId: "1:380388731453:web:968f4341198802b79d5854"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 
 hamburger.addEventListener('click', () => {
     // line.classList.toggle('open');
