@@ -8,8 +8,7 @@ const logo = document.querySelector('.logo');
 const headline = document.querySelector('.headline');
 const info = document.querySelector('.info');
 const nav = document.querySelector('nav');
-//const box = document.querySelector('.box');
-const skill = document.querySelector('.skill-per');
+const skills = document.querySelector('#skills');
 
 
 hamburger.addEventListener('click', () => {
@@ -97,33 +96,37 @@ tl.fromTo(
     {opacity: 1, x: 0},
     "-=0.5")
 
-/*
+let animationRun = false
 function scrollAppear(){
     var skillsPosition = skills.getBoundingClientRect().top;
     var screenPosition = window.innerHeight / 2;
-    if(skillsPosition < screenPosition){
-    skills.classList.add('skills-appear');
+    if(skillsPosition < screenPosition && !animationRun){
+    //skills.classList.add('skills-appear');
+    skillbarAnimation()
+    animationRun = true
     }
 };
 
 window.addEventListener('scroll', scrollAppear);
-*/
 
-$('.skill-per').each(function(){
-    var $this = $(this);
-    var per = $this.attr('per');
-    $this.css("width",per+'%');
-    $({animatedValue: 0}).animate({animatedValue: per},{
-      duration: 1000,
-      step: function(){
-        $this.attr('per', Math.floor(this.animatedValue) + '%');
-      },
-      complete: function(){
-        $this.attr('per', Math.floor(this.animatedValue) + '%');
-      }
+
+function skillbarAnimation(){
+console.log('caroline');
+    $('.skill-per').each(function(){
+        var $this = $(this);
+        var per = $this.attr('per');
+        $this.css("width",per+'%');
+        $({animatedValue: 0}).animate({animatedValue: per},{
+          duration: 1000,
+          step: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          },
+          complete: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          }
+        });
     });
-});
-  
+}
 
 new Glide('.glide', {
     type: 'carousel',
