@@ -123,7 +123,6 @@ window.addEventListener('scroll', scrollAppear);
 
 
 function skillbarAnimation(){
-console.log('caroline');
     $('.skill-per').each(function(){
         var $this = $(this);
         var per = $this.attr('per');
