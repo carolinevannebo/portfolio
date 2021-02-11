@@ -212,6 +212,11 @@ table{
     height: 50vh;
     object-fit: contain;
 }
+.glide__slide img{
+    width: 80vw;
+    height: 50vh;
+    object-fit: contain;
+}
 
 
 
